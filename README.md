@@ -24,17 +24,18 @@ This project makes use of gcc and make for the compilation process.
 <strong><h3>Windows</h3></strong>
 Ensure you have gcc, and make(Can install using chocolatey). Then run the following command:
 
-make
+<pre>make</pre>
 <strong><h3>Linux</h3></strong>
 First make sure SDL is installed. If you haven't install SDL by running make linux_install. Then run the following command:
 
-make linux 
+<pre>make linux </pre>
 to compile.
 
 <strong><h3>Mac</h3></strong>
 Ensure sdl is installed. Then run the following command:
 
-make mac
+<pre>make mac</pre>
+
 <strong><h2>Running</h2></strong>
 
 After successfully compiling run the program using following command:
@@ -43,36 +44,36 @@ After successfully compiling run the program using following command:
 where MAP is the name of the file found in the maps folder. You can create other maps and pass them while running program as above. Map files accept only the allowed characters.
 
 Controls
-W - Moving forward
+<code>W</code> - Moving forward
 
-S - Moving backward
+<code>S</code> - Moving backward
 
-A - Look left
+<code>A</code> - Look left
 
-D - Look right
+<code>D</code> - Look right
 
 Mouse move left/right - look left or right
 
-M - Turn off map visibility. The 2D map won't be visible on clicking
+<code>M</code> - Turn off map visibility. The 2D map won't be visible on clicking
 
-N - Turn on map visibility. The 2D map will be visible again if it wasn't
+<code>N</code> - Turn on map visibility. The 2D map will be visible again if it wasn't
 
 Have fun!
 
 <strong><h2>Directories</h2></strong>
-src
+<code>src</code>
 
 Contains all the source code files written in C.
 
-inc
+<code>inc</code>
 
 Contains all the header files.
 
-maps
+<code>maps</code>
 
 Contains map data files. This will be used by the program to output the map layout.
 
-images
+<code>images</code>
 
 Contains image files.
 
