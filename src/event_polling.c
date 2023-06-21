@@ -1,4 +1,4 @@
-#include "../inc/maze.h"
+#include "../header/maze.h"
 
 /**
  * game_event_loop - handles SDL rendering loop and listening to events
