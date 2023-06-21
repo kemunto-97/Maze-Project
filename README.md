@@ -11,28 +11,32 @@ If the player hits a wall, they cannot move unless they change their direction.
 
 The player can move in several directions and rotate at the same time.
 
-Installation
+<strong><h2>Installation</h2></strong>
+
 Clone this repo:
 
 git clone https://github.com/candiepih/The-Maze.git
-Compiling
+
+<strong><h2>Compiling</h2></strong>
+
 This project makes use of gcc and make for the compilation process.
 
-Windows
+<strong><h3>Windows</h3></strong>
 Ensure you have gcc, and make(Can install using chocolatey). Then run the following command:
 
 make
-Linux
+<strong><h3>Linux</h3></strong>
 First make sure SDL is installed. If you haven't install SDL by running make linux_install. Then run the following command:
 
 make linux 
 to compile.
 
-Mac
+<strong><h3>Mac</h3></strong>
 Ensure sdl is installed. Then run the following command:
 
 make mac
-Running
+<strong><h2>Running</h2></strong>
+
 After successfully compiling run the program using following command:
 
 ./maze MAP
@@ -55,7 +59,7 @@ N - Turn on map visibility. The 2D map will be visible again if it wasn't
 
 Have fun!
 
-Directories
+<strong><h2>Directories</h2></strong>
 src
 
 Contains all the source code files written in C.
@@ -72,15 +76,15 @@ images
 
 Contains image files.
 
-Texture sources
+<strong><h3>Texture Sources</h3></strong>
 Weapon
 
 https://www.seekpng.com/idown/u2w7u2t4i1y3a9y3_call-of-duty-guns-firearms-gun-weapons-coat/
 
-Related
+<strong><h3>Related</h3></strong>
 The Maze - Holberton Project Page
 
-Authors
+<strong><h3>Authors</h3></strong>
 Dianah Nyamweya kemuntonyamweya@gmail.com
 
 ![image](https://github.com/kemunto-97/Maze-Project/assets/85859798/8cf8b16f-4525-4aac-bec6-39d445365ff9)
