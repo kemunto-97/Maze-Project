@@ -1,4 +1,4 @@
-#include "../inc/maze.h"
+#include "../header/maze.h"
 
 /**
  * shade_walls - Sets the color to paint walls based on orientation
