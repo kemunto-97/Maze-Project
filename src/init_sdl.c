@@ -1,4 +1,4 @@
-#include "../inc/maze.h"
+#include "../header/maze.h"
 
 /**
  * print_sdl_error - prints any sdl error
