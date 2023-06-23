@@ -8,23 +8,30 @@
  */
 void game_event_loop(sdl_instance *sdl, map_t *map)
 {
-	int quit = 0;
-	SDL_Event e;
-	player player = {{80, 70, PLAYER_WIDTH, PLAYER_WIDTH}, (FOV * 2.5)};
-	SDL_Point mouse = {0, 0};
-	SDL_bool map_active = SDL_TRUE;
-	thread_data data = {sdl, map, &player, &map_active, &quit};
-	SDL_Thread *thread_ID = NULL;
+    int quit = 0;
+    SDL_Event e;
+    player player_data = {{80, 70, PLAYER_WIDTH, PLAYER_WIDTH}, (FOV * 2.5)};
+    SDL_Point mouse = {0, 0};
+    SDL_bool map_active = SDL_TRUE;
+    thread_data data;
 
-	thread_ID = SDL_CreateThread(render_thread, "RenderingThread", &data);
+    data.sdl = sdl;
+    data.map = map;
+    data.player = &player_data;
+    data.map_active = &map_active;
+    data.quit = &quit;
 
-	while (!quit)
-	{
-		poll_events(&quit, &e, &player, &mouse, &map_active);
-		player_collision_detection(&player, map);
-	}
-	SDL_WaitThread(thread_ID, NULL);
+    SDL_Thread *thread_ID = SDL_CreateThread(render_thread, "RenderingThread", &data);
+
+    while (!quit)
+    {
+        poll_events(&quit, &e, &player_data, &mouse, &map_active);
+        player_collision_detection(&player_data, map);
+    }
+    
+    SDL_WaitThread(thread_ID, NULL);
 }
+
 
 /**
  * poll_events - listens and handles SDL events
